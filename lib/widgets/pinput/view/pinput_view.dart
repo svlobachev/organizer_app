@@ -11,9 +11,9 @@ import 'header_view.dart';
 
 class PinPutView extends StatelessWidget {
   PinPutView({Key? key}) : super(key: key);
-  SessionController _session = Get.put(SessionController());
+  final SessionController _session = Get.find();
   Box box = Hive.box('RegistrationBox');
-  GRPCClient gRPCClient = Get.put(GRPCClient());
+  GRPCClient gRPCClient = Get.find();
   @override
   Widget build(BuildContext context) {
     final defaultPinTheme = PinTheme(

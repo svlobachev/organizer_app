@@ -1,7 +1,5 @@
 import 'package:organizer_app/widgets/login/model/registration_model.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:grpc/grpc.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -9,7 +7,7 @@ import 'generated/organizer.pbgrpc.dart';
 
 class GRPCClient {
   Box box = Hive.box('RegistrationBox');
-  RegistrationModel registrationController = Get.put(RegistrationModel());
+  RegistrationModel registrationController = RegistrationModel();
 
   clientChannel() {
     var channel = ClientChannel(

@@ -10,13 +10,14 @@ import 'dart:ui' as ui;
 
 class MyLogin extends StatelessWidget {
   MyLogin({Key? key}) : super(key: key);
-  final phoneFieldController = Get.put(PhoneFieldController());
-  final internetCheck = Get.put(InternetCheck());
+  PhoneFieldController phoneFieldController = Get.find();
+  InternetCheck internetCheck = Get.find();
   final _onVisible = false.obs;
   Box box = Hive.box('RegistrationBox');
 
   @override
   Widget build(BuildContext context) {
+
     var languageCode = ui.window.locale.languageCode.toUpperCase();
     box.put('languageCode', languageCode);
     if (languageCode == "EN") {

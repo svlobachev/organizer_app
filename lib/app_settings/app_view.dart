@@ -24,8 +24,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
       debugPrint("Выбран язык --> ${ui.window.locale.languageCode.toUpperCase()}");
       debugPrint("Выбрана страна --> ${ui.window.locale.countryCode?.toUpperCase()}");
-
-
     return GetMaterialApp(
       translations: Localization(),
       // ваши переводы

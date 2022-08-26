@@ -14,13 +14,13 @@ import 'package:hive/hive.dart';
 
 
 MyFloatingActionButtonController myFloatingActionButtonController =
-    Get.put(MyFloatingActionButtonController());
+    Get.find();
 
 class MyBottomNavigationBar extends StatelessWidget {
   MyBottomNavigationBar({Key? key}) : super(key: key);
   var box = Hive.box('RegistrationBox');
 
-  final MyTabController _tabx = Get.put(MyTabController());
+  final MyTabController _tabx = Get.find();
   List<Color> colors = [Colors.red, Colors.green, Colors.yellow];
   Random random = Random();
   late int randomNumber; //

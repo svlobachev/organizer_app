@@ -9,11 +9,11 @@ class OtpFooter extends StatelessWidget {
   var _onCounter = ''.obs;
   var _onCounterTime = 60.obs;
   final int _onCounterStep = 30;
-  final internetCheck = Get.put(InternetCheck());
+  final InternetCheck internetCheck = Get.find();
 
   @override
   Widget build(BuildContext context) {
-    GRPCClient gRPCClient = Get.put(GRPCClient());
+    GRPCClient gRPCClient = Get.find();
     return SingleChildScrollView(
       // padding: EdgeInsets.fromLTRB(24, 64, 24, 24),
       child: Column(

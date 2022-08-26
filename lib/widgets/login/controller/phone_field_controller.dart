@@ -1,13 +1,9 @@
-import 'package:organizer_app/app_settings/parts/internet_check.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:intl_phone_field/countries.dart';
 import 'package:intl_phone_field/phone_number.dart';
 
 class PhoneFieldController {
-  final internetCheck = Get.put(InternetCheck());
-  // final SessionController _session = Get.put(SessionController());
   final _box = Hive.box('RegistrationBox');
   late PhoneNumber _phoneNumber;
   late String _phone;

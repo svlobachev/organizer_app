@@ -5,10 +5,10 @@ import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 
 class RegistrationCompleteWay{
-  final SessionController _session = Get.put(SessionController());
-  Box box = Hive.box('RegistrationBox');
-
   registrationWay(){
+
+    final SessionController _session = Get.find();
+    Box box = Hive.box('RegistrationBox');
     if (box.containsKey('registrationComplete') &&
         box.get('registrationComplete') == 'true'){
       _session.sessionPutToHive();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../bottom_navigation_bar/view/bottom_navigation_bar_view.dart';
 
-MyBottomNavigationBar myBottomNavigationBar = Get.put(MyBottomNavigationBar());
+MyBottomNavigationBar myBottomNavigationBar = Get.find();
 
 class MyFloatingActionButtonController extends GetxController {
   late Image _myIcon;
