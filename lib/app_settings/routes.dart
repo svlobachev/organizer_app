@@ -1,10 +1,10 @@
+import 'package:get/get.dart';
 import 'package:organizer_app/widgets/login/view/login_view.dart';
 import 'package:organizer_app/widgets/pages/main_page.dart';
-import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../widgets/login/controller/registration_way_controller.dart';
 
-RegistrationCompleteWay registrationCompleteWay =  RegistrationCompleteWay();
+RegistrationCompleteWay registrationCompleteWay =  Get.find();
 
 
 String myInitialRoute = '/';

@@ -10,6 +10,5 @@ Future<void> main() async {
   await Hive.openBox('RegistrationBox');
   hiveInit();
   runApp(MyApp());
-  DependencyInjection dependencyInjection = DependencyInjection();
-  dependencyInjection.dependencyInjection();
+  dependencyInjection();
 }

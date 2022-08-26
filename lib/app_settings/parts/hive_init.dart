@@ -5,7 +5,10 @@ hiveInit() {
   // box.deleteFromDisk();
   box.delete('serverUserUuid');
   box.delete('registrationComplete');
+  box.delete('registrationPinCode');
+
   box.put('session', '');
+
   if (!box.containsKey('serverUserUuid')) {
     box.put('serverUserUuid', '');
   }
