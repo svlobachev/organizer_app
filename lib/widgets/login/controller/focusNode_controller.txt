@@ -1,0 +1,25 @@
+// ignore_for_file: file_names
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+class FocusNodeController extends GetxController {
+  final FocusNode focusNode = FocusNode();
+
+  @override
+  void onInit() {
+    // focusNode.addListener((){ ...do some stuff }));
+    focusNode.addListener(() {
+      if (kDebugMode) {
+        print('focusNode updated: hasFocus: ${focusNode.hasFocus}');
+      }
+    });
+    super.onInit();
+  }
+
+  @override
+  onClose() {
+    focusNode.dispose();
+    super.onClose();
+  }
+}

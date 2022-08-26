@@ -1,0 +1,19 @@
+import 'package:intl_phone_field/phone_number.dart';
+
+class LoginModel {
+  // final _box = Hive.box('RegistrationBox');
+  String _completePhoneNumber = '';
+  static const _phoneNumTest = "+72222222222";
+
+  set phoneNumber(PhoneNumber value) {
+    _completePhoneNumber = value.completeNumber;
+  }
+
+  bool phoneSearchInTheDatabase() {
+    // ищем совпадение в базе на сервер
+    if (_completePhoneNumber == _phoneNumTest) {
+      return true;
+    }
+    return false;
+  }
+}
